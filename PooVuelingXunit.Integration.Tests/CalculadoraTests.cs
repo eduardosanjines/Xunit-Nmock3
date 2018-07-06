@@ -1,24 +1,19 @@
 ﻿using System;
 using Xunit;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PooVuelingXunit.Integration.Tests
 {
-  
     public class CalculadoraTests
     {
         ICalculadora iCalculadora = new Calculadora();
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         [Fact]
         public void DivisionTest()
         {
-            Assert.Equal(2, iCalculadora.Division(4, 2));
-            log.Info("Se ha iniciado el metodo Division");
-            
+            Assert.Equal(2, iCalculadora.Division(4, 2));            
         }
 
         [Fact]

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NMock;
 using Xunit;
 
 namespace PooVuelingXunit.Nmock3.Unit.Tests
 {
-    public class CalculadoraTests: IClassFixture<CalculadoraFixture>
+    public class CalculadoraTests : IClassFixture<CalculadoraFixture>
     {
         CalculadoraFixture fixture;
-
         public CalculadoraTests(CalculadoraFixture fixture)
         {
             this.fixture = fixture;
@@ -19,7 +19,7 @@ namespace PooVuelingXunit.Nmock3.Unit.Tests
         [Fact]
         public void DivisionTest()
         {
-            Assert.Equal(2, fixture.MockObject.Division(4, 2));
+           Assert.Equal(2, fixture.MockObject.Division(4, 2));
 
         }
 
@@ -33,7 +33,7 @@ namespace PooVuelingXunit.Nmock3.Unit.Tests
         [Fact]
         public void RestaTest()
         {
-           Assert.Equal(0, fixture.MockObject.Resta(4, 4));
+            Assert.Equal(0, fixture.MockObject.Resta(4, 4));
         }
 
         [Fact]
