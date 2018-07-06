@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PooVuelingXunit;
+﻿using PooVuelingXunit;
 using System;
 using NMock;
 using System.Collections.Generic;
@@ -18,36 +17,33 @@ namespace PooVuelingXunit.Tests
 
         public CalculadoraTests(CalculadoraFixture fixture)
         {
-       
             this.fixture = fixture;
         }
 
         [Fact]
         public void DivisionTest()
         {
-            var result = fixture.MockObject.Division(4, 2);
-       
-  
+            Assert.Equal(2, fixture.MockObject.Division(4, 2));
         }
 
         [Fact]
         public void MultiplicacionTest()
         {
-            var result = fixture.MockObject.Multiplicacion(4, 2);
+            Assert.Equal(4, fixture.MockObject.Multiplicacion(2, 2));
 
         }
 
         [Fact]
         public void RestaTest()
         {
-            var result = fixture.MockObject.Resta(4, 2);
+            Assert.Equal(2, fixture.MockObject.Resta(4, 2));
 
         }
 
         [Fact]
         public void SumaTest()
         {
-            var result = fixture.MockObject.Suma(4, 2);
+            Assert.Equal(6, fixture.MockObject.Suma(4, 2));
 
         }
     }
